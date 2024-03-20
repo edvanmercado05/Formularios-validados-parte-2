@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de la codificación de caracteres y la vista del portapapeles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Resultados de Envíos</title>
+    <!-- Vinculación de la hoja de estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vinculación de la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título de la página -->
+        <h1>Resultados de Envíos</h1>
+        <!-- Botón para borrar los formularios -->
+        <button id="borrarFormularios" class="btn btn-danger">Borrar Formularios</button>
+        <!-- Tabla para mostrar los resultados -->
+        <table class="table">
+            <!-- Encabezados de la tabla -->
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                    <th>Edad</th>
+                    <th>Fecha de Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody id="tablaResultados">
+                <!-- Aquí se mostrarán los resultados -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Vinculación del archivo de scripts JavaScript -->
+    <script src="scriptsResultados.js"></script>
+    <!-- Script JavaScript para borrar los formularios al hacer clic en el botón -->
+    <script>
+        // Se agrega un event listener al botón con id "borrarFormularios" para que ejecute una función al hacer clic
+        document.getElementById("borrarFormularios").addEventListener("click", function() {
+            // Borra todos los elementos hijos del elemento con id "tablaResultados", que son las filas de la tabla
+            document.getElementById("tablaResultados").innerHTML = "";
+        });
+    </script>
+</body>
+</html>
